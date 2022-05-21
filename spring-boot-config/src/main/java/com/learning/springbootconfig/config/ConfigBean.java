@@ -26,6 +26,6 @@ public class ConfigBean {
 	}
 	public void setWholeTitle(String wholeTitle) {
 		this.wholeTitle = wholeTitle;
-	}	
-	
+	}
+
 }
