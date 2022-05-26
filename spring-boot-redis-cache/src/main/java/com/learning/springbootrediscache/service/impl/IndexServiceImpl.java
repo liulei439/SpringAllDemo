@@ -15,4 +15,23 @@ public class IndexServiceImpl implements IndexService {
     public User queryUserInfo(int id) {
         return indexMapper.queryUserInfo(id);
     }
+
+    @Override
+    public User updateUserInfo(User user) {
+        int i = indexMapper.updateUserInfo(user);
+        if (i==0){
+            return null;
+        }
+        return user;
+    }
+
+    @Override
+    public int deleteUserInfo(int id) {
+        return indexMapper.deleteUserInfo(id);
+    }
+
+    @Override
+    public int insertUserInfo(User user) {
+        return indexMapper.insertUserInfo(user);
+    }
 }

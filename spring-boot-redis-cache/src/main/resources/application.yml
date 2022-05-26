@@ -65,6 +65,15 @@ spring:
           log-slow-sql: true
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
+  redis:
+    # Redis数据库索引（默认为0）
+    database: 0
+    # Redis服务器地址
+    host: 192.168.80.129
+    # Redis服务器连接端口
+    port: 6379
+    # Redis服务器连接密码
+    password:
 
 # MyBatis配置
 mybatis:
@@ -78,6 +87,5 @@ mybatis:
 
 logging:
   level:
-    com:
-      springboot:
-        mapper: debug
+    com.learning: debug
+
