@@ -8,64 +8,30 @@
         <version>2.6.8</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-
     <groupId>com.learning</groupId>
-    <artifactId>spring-boot-mybatis</artifactId>
+    <artifactId>spring-boot-admin</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-
-    <name>spring-boot-mybatis</name>
-    <description>springboot整合mybatis</description>
-
+    <name>spring-boot-admin</name>
+    <description>Spring Boot 整合 springboot admin</description>
     <properties>
         <java.version>1.8</java.version>
-        <mybatis.version>2.2.0</mybatis.version>
     </properties>
-
     <dependencies>
-        <!--springboot web-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <!--lombok-->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>${mybatis.version}</version>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-server</artifactId>
+            <version>2.6.0</version>
         </dependency>
 
-        <!--mysql驱动-->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
-
-        <!--druid-->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid-spring-boot-starter</artifactId>
-            <version>1.2.8</version>
-        </dependency>
-
-        <!--springboot test-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>
-
-        <!--springboot admin-->
-        <dependency>
-            <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-starter-client</artifactId>
-            <version>2.6.0</version>
         </dependency>
     </dependencies>
 
