@@ -62,11 +62,36 @@ spring:
         stat: 
           log-slow-sql: true
 
-# MyBatis配置
+logging:
+  level:
+    com.learning: debug
+
 mybatis:
+  configuration:
+    map-underscore-to-camel-case: true  #下划线转驼峰
+  mapper-locations: classpath:mapper/**/*Mapper.xml
+  type-aliases-package: com.learning.mybatispage.entity
+
+mapper:
+  mappers:
+    - tk.mybatis.mapper.common.Mapper
+  not-empty: true
+  style: camelhump
+  wrap-keyword: "`{0}`"
+  safe-delete: true
+  safe-update: true
+  identity: MYSQL
+
+pagehelper:
+  auto-dialect: true
+  helper-dialect: mysql
+  reasonable: true
+  params: count=countSql
+# MyBatis配置
+#mybatis:
   # 搜索指定包别名
 #  typeAliasesPackage: com.ruoyi.**.domain
   # 配置mapper的扫描，找到所有的mapper.xml映射文件
-  mapperLocations: classpath*:mapper/**/*Mapper.xml
+#  mapperLocations: classpath*:mapper/**/*Mapper.xml
   # 加载全局的配置文件
 #  configLocation: classpath:mybatis/mybatis-config.xml

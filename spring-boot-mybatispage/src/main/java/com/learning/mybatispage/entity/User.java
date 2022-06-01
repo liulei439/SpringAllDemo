@@ -1,5 +1,6 @@
 package com.learning.mybatispage.entity;
 
+import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -8,6 +9,7 @@ import java.util.Date;
  * @author 
  */
 public class User implements Serializable {
+    @Id
     private Integer id;
 
     private String username;
